@@ -1,0 +1,24 @@
+
+<p *ngIf="kod != ''">your kod: {{kod}}</p>
+<p *ngIf="kod === ''">you don't have kod</p>
+<br>
+<hr>
+
+<p>
+  Enter number (look in console)
+</p>
+<form [formGroup]="forma">
+  <button [disabled]="forma.untouched" (click)="back(forma)">
+    BACK
+  </button>
+  <input type="number" [formControl]="count">
+  <button [disabled]="forma.untouched" (click)="next(forma)">
+    NEXT
+  </button>
+</form>
+<br>
+<a routerLink="/">
+  GO TO HOME
+</a>
+<br>
+<hr>
